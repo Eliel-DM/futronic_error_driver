@@ -42,7 +42,7 @@
 
 ---
 
-## 4. 🛠️ Passos para Correção
+## 4. 🛠️ Passos para Correção Manual
 
 1. **📝 Apagando registro manualmente**
 
@@ -67,6 +67,30 @@
 
 ---
 
-**Manual criado por:** Eliel Dias Matos – Analista de Suporte Computacional 👨‍💻
+## 🖥️ Passos para Correção Automática
+
+Coreção do erro através do **PowerShell com privilégios de administrador**.
+
+### 🚀 Instruções para Execução
+
+### 1. Abrir o PowerShell como Administrador
+
+1. No menu **Iniciar** do Windows, pesquise por **PowerShell**.
+2. Clique com o botão direito no ícone do **Windows PowerShell** e selecione **Executar como administrador**.
+3. Confirme a permissão no **Controle de Conta de Usuário (UAC)**.
 
 ---
+
+### 2. Executar o Comando
+
+No PowerShell aberto como administrador, copie e cole o comando abaixo e pressione **Enter**:
+
+```powershell
+powershell -Command "Invoke-WebRequest -Uri 'https://github.com/Eliel-DM/futronic_error_driver/raw/main/src/index.bat' -OutFile 'index.bat'; Start-Process 'index.bat' -Verb RunAs"
+```
+
+- 👌Após reiniciar será gerado uma mensagem de sucesso !!
+
+  ![Imagem do erro de instalação do driver Futronic](images/sucess.png)
+
+**Manual criado por:** Eliel Dias Matos – Analista de Suporte Computacional 👨‍💻
